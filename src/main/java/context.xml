@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation=" http://www.springframework.org/schema/beans 
+	http://www.springframework.org/schema/beans/spring-beans.xsd
+	http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+	<context:component-scan base-package=""></context:component-scan>
+	<bean id="sh" class="com.wolken.wolkenapp.Bean.SuperHeroBean">
+	<!-- <property name="name" value="spyderman"></property>
+	<property name="origin" value="california"></property>
+	<property name="superpower" ref="sp"></property> -->
+	<constructor-arg   value="spyderman" type="java.lang.String" ></constructor-arg>
+	<constructor-arg  value="california"  type="java.lang.String"></constructor-arg>
+	<constructor-arg   ref="sp" ></constructor-arg>
+	
+	
+	
+	</bean>
+	<bean id="sp" class="com.wolken.wolkenapp.Bean.SuperPower">
+	<!-- <property name="power" value="sixthsence"></property>
+	<property name="noOfPowers" value="5"></property> -->
+	<constructor-arg   value="sixthsense" type="java.lang.String"></constructor-arg>
+	<constructor-arg  value="5" type="int"></constructor-arg>
+	
+	
+	</bean>
+
+
+
+</beans>
